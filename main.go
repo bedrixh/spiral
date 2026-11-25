@@ -21,7 +21,7 @@ func getSpiralPixel(size, line, character int) bool {
 	character++
 
 	//removing one block from the spiral so it is spiral
-	if line < size/2 && character < size/2 && line%2 == 1 && line == character {
+	if line < size/2 && character < size/2 && line%2 != 0 && line == character {
 		return false
 	}
 
@@ -46,7 +46,7 @@ func getSpiralPixel(size, line, character int) bool {
 
 	// drawing the full columns
 	alreadyWrittenFullLines := line/2 + 1
-	if character < alreadyWrittenFullLines*2 && character%2 == 1 {
+	if character < alreadyWrittenFullLines*2 && character%2 != 0 {
 		return true
 	}
 
