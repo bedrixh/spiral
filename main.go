@@ -1,11 +1,15 @@
 package main
 
 func main() {
+	PrintSpiral(22)
+}
+
+func PrintSpiral(size int) {
 	boolToString := map[bool]string{
 		false: "  ",
 		true:  "##",
 	}
-	const size = 30
+	size = size + size%2
 
 	for lineN := range size {
 		for charN := range size {
