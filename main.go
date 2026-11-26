@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	PrintSpiral(22)
+	PrintSpiral(25)
 }
 
 func PrintSpiral(size int) {
@@ -21,7 +21,7 @@ func PrintSpiral(size int) {
 }
 
 func getSpiralPixel(size, line, character int) bool {
-	// zero'th character does not draw anything
+	// moving the spiral one to the left so there is not the begining of the spiral
 	character++
 
 	//removing one block from the spiral so it is spiral
